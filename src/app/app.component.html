@@ -1,0 +1,9 @@
+
+
+
+
+<h1>{{ nombre | titlecase}}</h1>
+
+
+<button pButton label="Cambiar nombre" (click)="mostrarNombre()" icon="pi pi-check" iconPos="right"></button>
+<p-card [header]="nombre | titlecase" subheader="lorem inpor"></p-card>
