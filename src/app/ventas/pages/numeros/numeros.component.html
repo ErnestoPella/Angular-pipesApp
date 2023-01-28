@@ -1,1 +1,29 @@
-<p>numeros works!</p>
+<div class="text-layout">
+    <h1>DecimalPipe y Porcentaje</h1>
+    <p>
+        Pipes incluidos en Anglar - Usualmente en el Common Module
+    </p>
+</div>
+
+<div class="card">
+    <div class="flex flex-wrap card-container">
+        <div class="flex-1 p-4">
+            <p-card header="Ventas Netas" subheader="del presente ano ">
+                <i class="pi pi-dollar"></i>
+                {{ ventasNetas + 2000000 | number:'1.2-2' }}
+            </p-card>
+        </div>
+        <div class="flex-1 p-4">
+            <p-card header="Ventas Brutas" subheader="del presente ano ">
+                {{ ventasNetas + 2000000 | currency:'USD':'symbol-narrow':'1.4-4' }}
+            </p-card>
+        </div>
+        <div class="flex-1 p-4">
+            <p-card header="Ganancia porcentual" subheader="del presente ano ">
+                {{ porcentajes | percent:'2.2-2' }}
+            </p-card>
+        </div>
+    </div>
+    
+</div>
+

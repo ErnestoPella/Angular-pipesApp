@@ -7,15 +7,71 @@
     </p>
 </div>
 
-<div class="p-grid">
-    <div class="p-col-4">
-        <p-card header="uppercase"></p-card>
+
+<div class="card">
+    <div class="flex flex-wrap card-container">
+        <div class="flex-1 p-4">
+            <p-card header="uppercase" [subheader]="nombreLower | uppercase">
+                {{nombreLower | uppercase}}
+            </p-card>
+        </div>
+        <div class="flex-1 p-4">
+            <p-card header="lowercase" [subheader]="nombreLower | lowercase">
+                {{nombreLower | lowercase}}
+            </p-card>
+        </div>
+        <div class="flex-1 p-4">
+            <p-card header="titlecase" [subheader]="nombreCompleto | titlecase">
+                {{nombreCompleto | titlecase}}
+            </p-card>
+        </div>
     </div>
-    <div class="p-col-4">
-        <p-card></p-card>
-    </div>
-    <div class="p-col-4">
-        <p-card></p-card>
-    </div>
+    
 </div>
 
+
+<div class="text-layout">
+    <h1>Date | fecha | Pipe</h1>
+    <p>
+        Pipe para mostrar las fechas
+    </p>
+</div>
+
+
+<div class="card">
+    <div class="flex flex-wrap card-container">
+        <div class="flex-1 p-4">
+            <p-card>
+                <ul>
+                    <li>fecha | date</li>
+                    <li>fecha | date: 'short'</li>
+                    <li>fecha | date: 'full'</li>
+                    <li>fecha | date: 'long'</li>
+                </ul>    
+                <hr>
+                <ul>
+                    <li> fecha | date: 'long':'GMT-6' </li>
+                    <li> fecha | date: 'long':'GMT-4':'es-HN' </li>
+                    <li> fecha | date: 'long':'GMT-4':'fr' </li>
+                </ul>
+            </p-card>
+        </div>
+        <div class="flex-1 p-4">
+            <p-card>
+                <ul>
+                    <li>{{fecha | date }}</li>
+                    <li>{{fecha | date: 'short' }}</li>
+                    <li>{{fecha | date: 'full' }}</li>
+                    <li>{{fecha | date: 'long' }}</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>{{ fecha | date: 'long':'GMT-6' }}</li>
+                    <li>{{ fecha | date: 'long':'GMT-4':'es-HN' }}</li>
+                    <li>{{ fecha | date: 'long':'GMT-4':'fr' }}</li>
+                </ul>
+
+            </p-card>
+        </div>
+    </div>
+</div>
