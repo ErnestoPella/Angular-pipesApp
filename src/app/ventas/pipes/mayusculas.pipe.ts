@@ -13,7 +13,6 @@ export class MayusculasPipe implements PipeTransform{
         } else{
             return valor.toLowerCase();
         }
-        
     }
 
 }
